@@ -21,7 +21,7 @@ noon)
     ;;
 
 midnight)
-    echo "y" | /home/bbs/bin/broadcast -o "神奇海螺" "現在時間: $(date "+%I:%M %p"), 凌晨了, 殼層體驗與你共度美好的夜晚 :) "
+    echo "y" | /home/bbs/bin/broadcast -o "神奇海螺" "現在時間: $(date "+%I:%M %p"), 夜深了, 殼層體驗與您共度美好的夜晚 :) "
     ;;
 
 *)
@@ -32,4 +32,5 @@ esac
 
 exit 0
 
-## Note: usage for bin/post: /home/bbs/bin/post <board name> <title> <owner> <file>
+## Usage: /home/bbs/bin/broadcast [-t sleep_time] [-n users_per_round] [-o broadcast_name] broadcast content
+
