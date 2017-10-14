@@ -9,28 +9,31 @@
 case "$1" in
 
 normal)
-    echo "y" | /home/bbs/bin/broadcast -o "神奇海螺" " 欸！ 現在時間: $(date "+%I:%M %p"), 已~經整點囉！"
-    ;;
+	echo "y" | /home/bbs/bin/broadcast -o "神奇海螺" " 欸！ 現在時間: $(date '+%I:%M %p'), 已~經整點囉！"
+	;;
 
 morning)
-    echo "y" | /home/bbs/bin/broadcast -o "神奇海螺" " 找ㄤ！ 現在時間: $(date "+%I:%M %p"), 又是一天中新的開始囉! > <"
-    ;;
+	echo "y" | /home/bbs/bin/broadcast -o "報時雞" " 咕咕咕～！ 現在時間: $(date '+%I:%M %p'), 又是一天中新的開始囉! > <"
+	;;
 
 noon)
-    echo "y" | /home/bbs/bin/broadcast -o "神奇海螺" " 欸！ 現在時間: $(date "+%I:%M %p"), 走走走, 快去吃飯惹！"
-    ;;
+	echo "y" | /home/bbs/bin/broadcast -o "同事" " 欸！ 現在時間: $(date '+%I:%M %p'), 走走走, 快去吃飯惹！"
+	;;
 
-midnight)
-    echo "y" | /home/bbs/bin/broadcast -o "神奇海螺" "現在時間: $(date "+%I:%M %p"), 夜深了, 殼層體驗與您共度美好的夜晚 :) "
-    ;;
+afternoon)
+	echo "y" | /home/bbs/bin/broadcast -o "紅茶" " 現在時間: $(date '+%I:%M %p'), 殼層體驗與您共度午後時光 :) "
+	;;
+
+night)
+	echo "y" | /home/bbs/bin/broadcast -o "子夜繁星" "晚安！ 現在時間: $(date '+%I:%M %p'), 殼層體驗與您共度美好的夜晚 :) "
+	;;
+
 
 *)
-    echo "Usage ${0} {normal|morning|noon|midnight}"
-    ;;
+	echo "Usage ${0} {normal|morning|noon|afternoon|night}"
+	;;
 
 esac
 
 exit 0
-
-## Usage: /home/bbs/bin/broadcast [-t sleep_time] [-n users_per_round] [-o broadcast_name] broadcast content
 
